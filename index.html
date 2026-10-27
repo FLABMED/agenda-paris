@@ -197,6 +197,10 @@ footer a{color:var(--lane-flab)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rem:#fbbf5a;--rem-bg:#3a2a12}}
 :root[data-theme="dark"]{--rem:#fbbf5a;--rem-bg:#3a2a12}
 .ev .tag.rem{background:var(--rem);color:#fff}
+.ev.short{flex-direction:row;align-items:center;gap:8px;padding:2px 9px}
+.ev.short .t{flex:0 0 auto;font-size:11.5px}
+.ev.short .ti{font-size:12.5px;-webkit-line-clamp:1!important;white-space:nowrap;text-overflow:ellipsis;display:block;min-width:0}
+.ev.short .tag{display:none}
 .ev.confirmado .tag.rem{background:#fff;color:var(--rem)}
 .rem-box{margin:0 0 14px;padding:10px 12px;border-radius:8px;background:var(--rem-bg);border-left:4px solid var(--rem)}
 .rem-box b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--rem);margin-bottom:4px}
@@ -713,7 +717,7 @@ function render(){
         const lines = Math.max(1, Math.floor((h-26)/17));
         const dim = active.has(ev.st) ? "" : " dim";
         const tags = (cl[ev.id]?`<span class="tag">Coincide</span>`:"") + (ev.rem&&ev.rem.length?`<span class="tag rem">Recordatorio</span>`:"") + (ev.tent?`<span class="tag tent">Opción ${ev.tent} · tentativa</span>`:"");
-        html += `<button class="ev ${ev.st}${ev.tent?" tent":""}${ev.e?"":" open-end"}${cl[ev.id]?" clash":""}${dim}" data-id="${ev.id}"
+        html += `<button class="ev ${ev.st}${h<48?" short":""}${ev.tent?" tent":""}${ev.e?"":" open-end"}${cl[ev.id]?" clash":""}${dim}" data-id="${ev.id}"
           style="--lc:${laneColor(ev)};top:${(s-min)*PPM+2}px;height:${h}px;${nCols[ev.id]>1?`left:calc(16px + (100% - 24px) * ${colOf[ev.id]} / ${nCols[ev.id]});right:auto;width:calc((100% - 24px) / ${nCols[ev.id]} - 4px);`:""}"
           aria-label="${esc(ev.s+(ev.e?"–"+ev.e:"")+", "+ev.ti+", "+STATUS[ev.st])}">
           <span class="t">${ev.s}${ev.e?"–"+ev.e:" · fin sin definir"} ${tags}</span>
