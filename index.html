@@ -265,7 +265,7 @@ const PEOPLE = [];
 const BOLD_NAMES = ["Liza", "Guillaume", "Romain Sinthe", "Eric Dugré", "François Molho", "Thierry Lucidarme", "Antoine Bourbon", "Nicolas Champetier", "Céline Dailly", "Thomas Fauvel", "Victorio Redondo", "Ximo Puig", "Medeya Spasova", "Annie Geoffroy", "Alexandra Dublanche", "Jérémy Hervé"];
 const BOLD_LABELS = [];
 const DAYS = [{"id": "d2", "n": "2", "dow": "Lunes", "label": "Innovación en corporaciones", "lanes": ["prog", "log"]}, {"id": "d3", "n": "3", "dow": "Martes", "label": "Industria, innovación y ecosistema emprendedor", "lanes": ["prog", "log"]}, {"id": "d4", "n": "4", "dow": "Miércoles", "label": "Paris-Saclay: investigación y deep tech", "lanes": ["prog", "log"]}, {"id": "info", "n": "i", "dow": "", "label": "Información de interés", "lanes": []}];
-const INFO = [{"t": "Alojamiento", "x": "Hôtel Alfred Sommier, 20 rue de l'Arcade, 75008 París.", "maps": "Hôtel Alfred Sommier, 20 rue de l'Arcade, 75008 Paris"}, {"t": "Vuelos", "x": "Ida, 2 nov.: Valencia 09:10 → París-Orly 11:10. Vuelta, 4 nov.: París-Orly (T1) 21:25."}, {"t": "Documentación", "x": "DNI o pasaporte en vigor. Para acceder a Mistral AI (3 nov.) es obligatorio el pasaporte."}, {"t": "Vestimenta", "x": "Business casual en visitas y encuentros empresariales."}, {"t": "Clima", "x": "En noviembre suele hacer frío en París: abrigo, calzado cómodo y paraguas."}, {"t": "Puntualidad y traslados", "x": "Los traslados están incluidos en la agenda y algunos horarios son ajustados. Llega con antelación a los puntos de encuentro."}];
+const INFO = [{"t": "Alojamiento", "x": "Hôtel Alfred Sommier, 20 rue de l'Arcade, 75008 París.", "maps": "Hôtel Alfred Sommier, 20 rue de l'Arcade, 75008 Paris"}, {"t": "Vuelos", "x": "Ida, 2 nov.: Valencia 09:10 → París-Orly 11:10. Vuelta, 4 nov.: Paris-Charles de Gaulle (terminal 2G) 21:25."}, {"t": "Documentación", "x": "DNI o pasaporte en vigor. Para acceder a Mistral AI (3 nov.) es obligatorio el pasaporte."}, {"t": "Vestimenta", "x": "Business casual en visitas y encuentros empresariales."}, {"t": "Clima", "x": "En noviembre suele hacer frío en París: abrigo, calzado cómodo y paraguas."}, {"t": "Puntualidad y traslados", "x": "Los traslados están incluidos en la agenda y algunos horarios son ajustados. Llega con antelación a los puntos de encuentro."}];
 const E = [
 {
 "d": "d2",
@@ -307,7 +307,7 @@ const E = [
 "lane": "prog",
 "block": 1,
 "s": "13:00",
-"e": "13:20",
+"e": "13:15",
 "st": "propuesto",
 "ti": "Station F: inteligencia artificial y nuevas tecnologías",
 "desc": "Tendencias tecnológicas y su impacto en la industria y el tejido empresarial.",
@@ -318,12 +318,22 @@ const E = [
 "d": "d2",
 "lane": "prog",
 "block": 1,
-"s": "13:30",
-"e": "14:00",
+"s": "13:15",
+"e": "13:40",
 "st": "propuesto",
 "ti": "Station F: presentación de Plug and Play",
-"desc": "Visita de Station F con Plug and Play. Ecosistema de startups; modelos de aceleración e innovación abierta; relación entre startups, grandes empresas e inversores. Presentación de Station F, Plug and Play y el programa B!UP a cargo de Liza.",
-"who": "Liza, responsable de la visita en Station F",
+"desc": "Visita de Station F con Plug and Play. Ecosistema de startups; modelos de aceleración e innovación abierta; relación entre startups, grandes empresas e inversores.",
+"venue": "Station F, 5 Parvis Alan Turing, 75013 París"
+},
+{
+"d": "d2",
+"lane": "prog",
+"block": 1,
+"s": "13:40",
+"e": "14:00",
+"st": "propuesto",
+"ti": "Station F: tour por las instalaciones",
+"desc": "Recorrido por las instalaciones de Station F.",
 "venue": "Station F, 5 Parvis Alan Turing, 75013 París"
 },
 {
@@ -331,52 +341,40 @@ const E = [
 "lane": "prog",
 "block": 1,
 "s": "14:00",
-"e": "14:30",
+"e": "15:15",
 "st": "propuesto",
 "ti": "Station F: presentación de dos startups",
-"desc": "Presentación de dos startups de Station F (20 min de presentación y demo + 10 min de preguntas cada una). Presentación del programa OCP a cargo de Guillaume.",
-"who": "Guillaume (programa OCP)",
-"venue": "Station F, 5 Parvis Alan Turing, 75013 París"
-},
-{
-"d": "d2",
-"lane": "prog",
-"block": 1,
-"s": "14:30",
-"e": "15:00",
-"st": "propuesto",
-"ti": "Station F: tour por las instalaciones",
-"desc": "Recepción y visita guiada por la zona compartida del campus, a cargo de Liza.",
-"who": "Liza, responsable de la visita en Station F",
+"desc": "Recepción y visita guiada por la zona compartida del campus, a cargo de Liza. Presentación de dos startups (20 min de presentación y demo + 10 min de preguntas cada una). Presentación de Station F, Plug and Play y el programa B!UP a cargo de Liza. Presentación del programa OCP a cargo de Guillaume.",
+"who": "Liza, responsable de la visita en Station F; Guillaume (programa OCP)",
 "venue": "Station F, 5 Parvis Alan Turing, 75013 París"
 },
 {
 "d": "d2",
 "lane": "log",
-"s": "15:00",
-"e": "15:45",
+"s": "15:15",
+"e": "16:20",
 "st": "sin",
 "ti": "Trayecto de Station F al hotel",
-"desc": "Salida de Station F a las 15:00. 40 minutos de trayecto; llegada al hotel a las 15:45."
+"desc": "Salida de Station F tras la última sesión (15:15). 40 minutos de trayecto según el programa; llegada al hotel a las 16:20."
 },
 {
 "d": "d2",
 "lane": "prog",
-"s": "15:45",
+"s": "16:20",
 "e": "17:30",
 "st": "confirmado",
 "ti": "Check-in en el hotel",
-"desc": "Llegada al hotel y check-in. Tiempo libre hasta la salida hacia Renault a las 17:30.",
+"desc": "Llegada al hotel y check-in. Salida hacia Renault a las 17:30.",
 "venue": "Hôtel Alfred Sommier, 20 rue de l'Arcade, 75008 París"
 },
 {
 "d": "d2",
 "lane": "log",
 "s": "17:30",
-"e": "18:20",
+"e": "18:25",
 "st": "sin",
 "ti": "Trayecto a Renault (Guyancourt)",
-"desc": "Salida del hotel a las 17:30. 50 minutos de trayecto; llegada a Renault antes de las 18:30."
+"desc": "Salida del hotel a las 17:30. 55 minutos de trayecto; llegada a Renault antes de las 18:30."
 },
 {
 "d": "d2",
@@ -395,19 +393,19 @@ const E = [
 "s": "20:00",
 "e": "20:45",
 "st": "sin",
-"ti": "Trayecto al hotel y llegada",
-"desc": "45 minutos de trayecto. Llegada al hotel a las 20:45. Hotel Alfred Sommier, 20 rue de l'Arcade, 75008 París."
+"ti": "Trayecto a la cena",
+"desc": "45 minutos de trayecto desde Renault hasta la residencia de la Delegación Permanente de España ante la OCDE."
 },
 {
 "d": "d2",
 "lane": "prog",
-"s": "21:15",
+"s": "21:00",
 "e": "23:00",
 "st": "propuesto",
-"ti": "Cena en la Embajada de España en París",
+"ti": "Cena con los embajadores de España",
 "desc": "Cena con Victorio Redondo, embajador de España en Francia, y Ximo Puig, embajador y representante permanente de España ante la OCDE.",
 "who": "Victorio Redondo, embajador de España en Francia; Ximo Puig, embajador y representante permanente de España ante la OCDE",
-"venue": "Embajada de España en París"
+"venue": "Residencia de la Delegación Permanente de España ante la OCDE, 10 Avenue Marceau, 75008 París"
 },
 {
 "d": "d3",
@@ -434,13 +432,22 @@ const E = [
 },
 {
 "d": "d3",
+"lane": "log",
+"s": "11:00",
+"e": "11:10",
+"st": "sin",
+"ti": "Trayecto al Ayuntamiento de Bezons",
+"desc": "10 minutos de trayecto."
+},
+{
+"d": "d3",
 "lane": "prog",
 "s": "11:30",
 "e": "13:00",
 "st": "propuesto",
 "ti": "Cóctel networking y almuerzo de trabajo",
 "desc": "Cóctel networking y almuerzo de trabajo con Alexandra Dublanche, vicepresidenta de la Región Île-de-France. Intercambio con directivos y responsables de innovación; debate sobre oportunidades de colaboración empresarial y desarrollo del ecosistema de innovación de Île-de-France.",
-"who": "Ximo Puig, embajador y representante permanente de España ante la OCDE (anfitrión); Alexandra Dublanche, vicepresidenta de la Región Île-de-France",
+"who": "Alexandra Dublanche, vicepresidenta de la Región Île-de-France",
 "venue": "Residencia del embajador de España ante la OCDE (Ximo Puig), 10 Avenue Marceau, 75008 París"
 },
 {
@@ -459,7 +466,7 @@ const E = [
 "e": "16:00",
 "st": "confirmado",
 "ti": "Visita a Mistral AI",
-"desc": "Conferencia y sesión plenaria con el equipo de Mistral. Encuentro con la persona responsable del área industrial. Es necesario facilitar nombre y apellidos de los participantes y llevar el pasaporte.",
+"desc": "Conferencia y sesión plenaria con el equipo de Mistral. Encuentro con la persona responsable del área industrial. Visita al área de robótica, con demostración de robots y presentación de sus aplicaciones. Es necesario facilitar nombre y apellidos de los participantes y llevar el pasaporte.",
 "who": "Romain Sinthe, responsable de desarrollo de negocio para el sur de Europa (South Europe GTM Lead), Mistral AI",
 "rem": [
 "Pasaporte en mano: acceso con lista nominal"
@@ -487,6 +494,15 @@ const E = [
 },
 {
 "d": "d3",
+"lane": "log",
+"s": "20:05",
+"e": "20:30",
+"st": "sin",
+"ti": "Trayecto al Restaurant Laurent",
+"desc": "25 minutos de trayecto desde Capgemini. Duración del trayecto según el programa; la hora es orientativa."
+},
+{
+"d": "d3",
 "lane": "prog",
 "s": "20:30",
 "e": null,
@@ -498,11 +514,11 @@ const E = [
 {
 "d": "d4",
 "lane": "log",
-"s": "08:20",
-"e": "09:10",
+"s": "08:30",
+"e": "09:20",
 "st": "sin",
 "ti": "Salida del hotel en autobús hacia Paris-Saclay",
-"desc": "Salida del hotel a las 08:20. 50 minutos de trayecto.",
+"desc": "Salida del hotel a las 08:30. 50 minutos de trayecto.",
 "rem": [
 "Último día: no se vuelve al hotel. Hacer el check-out y llevar el equipaje en el autobús"
 ]
@@ -510,50 +526,72 @@ const E = [
 {
 "d": "d4",
 "lane": "prog",
-"s": "09:15",
-"e": "09:30",
-"st": "confirmado",
-"ti": "Llegada y café de bienvenida",
-"desc": "Café de bienvenida en Paris-Saclay."
-},
-{
-"d": "d4",
-"lane": "prog",
 "s": "09:30",
-"e": "10:30",
+"e": "10:45",
 "st": "confirmado",
 "ti": "Presentación del ecosistema Paris-Saclay",
-"desc": "Presentación del ecosistema de innovación, investigación y emprendimiento de Paris-Saclay, con intervención de diferentes representantes del ecosistema e intercambio sobre el modelo de colaboración entre empresas, centros de investigación, universidades, startups e inversores.",
-"who": "Jérémy Hervé, director de Innovación y Desarrollo Económico de EPA Paris-Saclay"
+"desc": "Presentación del ecosistema de innovación de Paris-Saclay, con especial atención a la investigación, la transferencia tecnológica, el emprendimiento y el desarrollo de empresas de base tecnológica.",
+"who": "Jérémy Hervé, director de Innovación y Desarrollo Económico de EPA Paris-Saclay",
+"venue": "The Mix by Kadans Science Partners, RD128, 91190 Gif-sur-Yvette"
 },
 {
 "d": "d4",
-"lane": "prog",
+"lane": "log",
 "s": "10:45",
-"e": "12:00",
-"st": "confirmado",
-"ti": "Visita a Danone Research & Innovation",
-"desc": "Visita a las instalaciones de investigación e innovación y presentación de las principales líneas de innovación. Anfitrión: Eric Dugré, director del centro.",
-"who": "Eric Dugré, director del centro de I+D de Danone (anfitrión)"
+"e": "10:50",
+"st": "sin",
+"ti": "Traslado a pie a Danone",
+"desc": "Unos 5 minutos a pie."
 },
 {
 "d": "d4",
 "lane": "prog",
-"s": "12:15",
-"e": "14:00",
+"s": "11:00",
+"e": "12:30",
+"st": "confirmado",
+"ti": "Visita al centro de I+D de Danone",
+"desc": "Visita al centro de investigación y desarrollo de Danone, con una aproximación a sus actividades de innovación y desarrollo tecnológico. Anfitrión: Eric Dugré, director del centro.",
+"who": "Eric Dugré, director del centro de I+D de Danone (anfitrión)",
+"venue": "Danone, 16 Route 128, 91190 Gif-sur-Yvette"
+},
+{
+"d": "d4",
+"lane": "log",
+"s": "12:30",
+"e": "12:40",
+"st": "sin",
+"ti": "Traslado en autobús al restaurante",
+"desc": "Unos 10 minutos en autobús."
+},
+{
+"d": "d4",
+"lane": "prog",
+"s": "13:00",
+"e": "14:15",
 "st": "propuesto",
 "ti": "Almuerzo de trabajo con CEOs",
-"desc": "Almuerzo de trabajo con CEOs."
+"desc": "Almuerzo de trabajo e intercambio con representantes del ámbito empresarial, científico y académico sobre innovación, investigación y colaboración público-privada.",
+"venue": "Restaurante Chapeau, 10 Boulevard Gaspard Monge, 91120 Palaiseau"
+},
+{
+"d": "d4",
+"lane": "log",
+"s": "14:15",
+"e": "14:20",
+"st": "sin",
+"ti": "Traslado a pie a EDF",
+"desc": "Unos 5 minutos a pie."
 },
 {
 "d": "d4",
 "lane": "prog",
-"s": "14:00",
-"e": "15:00",
+"s": "14:30",
+"e": "16:00",
 "st": "confirmado",
-"ti": "Visita a EDF",
-"desc": "Visita al centro de I+D de EDF. Anfitriones: François Molho y Thierry Lucidarme.",
+"ti": "Visita al centro de I+D de EDF",
+"desc": "Presentación de las actividades de investigación, desarrollo e innovación de EDF, con especial atención a las tecnologías aplicadas a la industria y a las oportunidades de colaboración. Anfitriones: François Molho y Thierry Lucidarme.",
 "who": "François Molho, director de Acción Regional de EDF I+D (anfitrión); Thierry Lucidarme, delegado de Innovación de EDF I+D (anfitrión)",
+"venue": "EDF Lab Paris-Saclay, 7 boulevard Gaspard Monge, 91120 Palaiseau",
 "rem": [
 "Ten a mano el QR de acceso"
 ]
@@ -561,34 +599,34 @@ const E = [
 {
 "d": "d4",
 "lane": "log",
-"s": "15:00",
-"e": "15:20",
+"s": "16:00",
+"e": "16:15",
 "st": "sin",
-"ti": "Trayecto a Pasqal (Massy)",
-"desc": "20 minutos de trayecto. Duración del trayecto según el programa; la hora es orientativa."
+"ti": "Trayecto a Pasqal",
+"desc": "Trayecto hasta Pasqal (Palaiseau)."
 },
 {
 "d": "d4",
 "lane": "prog",
-"s": "15:30",
-"e": "17:30",
+"s": "16:15",
+"e": "18:00",
 "st": "confirmado",
 "ti": "Visita a Pasqal",
-"desc": "Presentación de Pasqal y de su actividad en computación cuántica. Visita a las instalaciones. Intercambio sobre deep tech, computación cuántica y aplicaciones industriales. Inicio a las 15:30 o a las 16:00.",
+"desc": "Presentación de Pasqal y de su actividad en computación cuántica. Visita a las instalaciones. Intercambio sobre tecnologías deep tech, computación cuántica y sus aplicaciones industriales.",
 "who": "Antoine Bourbon, Senior Business Developer, Pasqal",
-"venue": "7 rue Léonard de Vinci, Immeuble Pascal, 91300 Massy"
+"venue": "Pasqal, 24 rue Émile Baudot, 91120 Palaiseau"
 },
 {
 "d": "d4",
 "lane": "log",
-"s": "17:40",
-"e": "18:30",
+"s": "18:00",
+"e": "18:50",
 "st": "sin",
-"ti": "Traslado al aeropuerto de París-Orly",
+"ti": "Traslado al aeropuerto Paris-Charles de Gaulle",
 "maps": [
 [
-"Aeropuerto de París-Orly, terminal 1 (ORY)",
-"Paris-Orly Airport Terminal 1, 94390 Orly, France"
+"Aeropuerto Paris-Charles de Gaulle, terminal 2G (CDG)",
+"Paris Charles de Gaulle Airport Terminal 2G, 95700 Roissy-en-France, France"
 ]
 ],
 "desc": "50 minutos de trayecto."
@@ -599,18 +637,18 @@ const E = [
 "s": "21:25",
 "e": null,
 "st": "sin",
-"ti": "Vuelo París-Orly T1 → Valencia",
+"ti": "Vuelo Paris-Charles de Gaulle (T2G) → Valencia",
 "maps": [
 [
-"Aeropuerto de París-Orly, terminal 1 (ORY)",
-"Paris-Orly Airport Terminal 1, 94390 Orly, France"
+"Aeropuerto Paris-Charles de Gaulle, terminal 2G (CDG)",
+"Paris Charles de Gaulle Airport Terminal 2G, 95700 Roissy-en-France, France"
 ],
 [
 "Aeropuerto de Valencia (VLC), Manises",
 "Aeropuerto de Valencia, 46940 Manises, Valencia"
 ]
 ],
-"desc": "Salida de la delegación desde París-Orly, terminal 1, a las 21:25.",
+"desc": "Salida de la delegación desde Paris-Charles de Gaulle, terminal 2G, a las 21:25.",
 "rem": [
 "DNI o pasaporte en mano",
 "Tarjeta de embarque descargada en el móvil"
@@ -725,7 +763,7 @@ function render(){
       });
       laneEvs.forEach(ev=>{ const grp=laneEvs.filter(o=>toMin(o.s)<endMin(ev) && toMin(ev.s)<endMin(o)); nCols[ev.id]=Math.max(...grp.map(o=>colOf[o.id]))+1; });
       laneEvs.forEach(ev=>{
-        const s=toMin(ev.s), en=endMin(ev), h=(en-s)*PPM-4;
+        const s=toMin(ev.s), en=endMin(ev), h=Math.max(22,(en-s)*PPM-4);
         const lines = Math.max(1, Math.floor((h-26)/17));
         const dim = active.has(ev.st) ? "" : " dim";
         const tags = (cl[ev.id]?`<span class="tag">Coincide</span>`:"") + (ev.rem&&ev.rem.length?`<span class="tag rem">Recordatorio</span>`:"") + (ev.tent?`<span class="tag tent">Opción ${ev.tent} · tentativa</span>`:"");
