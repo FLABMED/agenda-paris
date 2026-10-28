@@ -262,7 +262,7 @@ const STATUS = {"confirmado": "En programa", "propuesto": "Propuesto", "sin": "V
 const HOME_LOC = ""; const HOME_LABEL = ""; const LOCS = {}; const MAP_SRC = "";
 const TEL = {};
 const PEOPLE = [];
-const BOLD_NAMES = ["Nicolas Champetier", "Céline Dailly", "Thomas Fauvel", "Victorio Redondo", "Ximo Puig", "Medeya Spasova", "Annie Geoffroy", "Alexandra Dublanche", "Jérémy Hervé"];
+const BOLD_NAMES = ["Liza", "Guillaume", "Romain Sinthe", "Eric Dugré", "François Molho", "Thierry Lucidarme", "Antoine Bourbon", "Nicolas Champetier", "Céline Dailly", "Thomas Fauvel", "Victorio Redondo", "Ximo Puig", "Medeya Spasova", "Annie Geoffroy", "Alexandra Dublanche", "Jérémy Hervé"];
 const BOLD_LABELS = [];
 const DAYS = [{"id": "d2", "n": "2", "dow": "Lunes", "label": "Innovación en corporaciones", "lanes": ["prog", "log"]}, {"id": "d3", "n": "3", "dow": "Martes", "label": "Industria, innovación y ecosistema emprendedor", "lanes": ["prog", "log"]}, {"id": "d4", "n": "4", "dow": "Miércoles", "label": "Paris-Saclay: investigación y deep tech", "lanes": ["prog", "log"]}, {"id": "info", "n": "i", "dow": "", "label": "Información de interés", "lanes": []}];
 const INFO = [{"t": "Alojamiento", "x": "Hôtel Alfred Sommier, 20 rue de l'Arcade, 75008 París.", "maps": "Hôtel Alfred Sommier, 20 rue de l'Arcade, 75008 Paris"}, {"t": "Vuelos", "x": "Ida, 2 nov.: Valencia 09:10 → París-Orly 11:10. Vuelta, 4 nov.: París-Orly (T1) 21:25."}, {"t": "Documentación", "x": "DNI o pasaporte en vigor. Para acceder a Mistral AI (3 nov.) es obligatorio el pasaporte."}, {"t": "Vestimenta", "x": "Business casual en visitas y encuentros empresariales."}, {"t": "Clima", "x": "En noviembre suele hacer frío en París: abrigo, calzado cómodo y paraguas."}, {"t": "Puntualidad y traslados", "x": "Los traslados están incluidos en la agenda y algunos horarios son ajustados. Llega con antelación a los puntos de encuentro."}];
@@ -322,7 +322,8 @@ const E = [
 "e": "14:00",
 "st": "propuesto",
 "ti": "Station F: presentación de Plug and Play",
-"desc": "Visita de Station F con Plug and Play. Ecosistema de startups; modelos de aceleración e innovación abierta; relación entre startups, grandes empresas e inversores.",
+"desc": "Visita de Station F con Plug and Play. Ecosistema de startups; modelos de aceleración e innovación abierta; relación entre startups, grandes empresas e inversores. Presentación de Station F, Plug and Play y el programa B!UP a cargo de Liza.",
+"who": "Liza, responsable de la visita en Station F",
 "venue": "Station F, 5 Parvis Alan Turing, 75013 París"
 },
 {
@@ -333,7 +334,8 @@ const E = [
 "e": "14:30",
 "st": "propuesto",
 "ti": "Station F: presentación de dos startups",
-"desc": "Presentación de dos startups de Station F.",
+"desc": "Presentación de dos startups de Station F (20 min de presentación y demo + 10 min de preguntas cada una). Presentación del programa OCP a cargo de Guillaume.",
+"who": "Guillaume (programa OCP)",
 "venue": "Station F, 5 Parvis Alan Turing, 75013 París"
 },
 {
@@ -344,7 +346,8 @@ const E = [
 "e": "15:00",
 "st": "propuesto",
 "ti": "Station F: tour por las instalaciones",
-"desc": "Recorrido por el campus de Station F.",
+"desc": "Recepción y visita guiada por la zona compartida del campus, a cargo de Liza.",
+"who": "Liza, responsable de la visita en Station F",
 "venue": "Station F, 5 Parvis Alan Turing, 75013 París"
 },
 {
@@ -425,7 +428,7 @@ const E = [
 "e": "11:00",
 "st": "confirmado",
 "ti": "Visita a RIBER",
-"desc": "Recepción y bienvenida a cargo de Medeya Spasova, responsable de Relaciones con Empresas y Desarrollo Internacional del CEEVO (Comité d’Expansion Économique du Val-d’Oise). Encuentro e intercambio con Annie Geoffroy, CEO de RIBER. Presentación de la empresa y de sus principales líneas de actividad, con atención a la innovación y las tecnologías de alto valor añadido.",
+"desc": "Recepción con un desayuno y bienvenida a cargo de Medeya Spasova, responsable de Relaciones con Empresas y Desarrollo Internacional del CEEVO (Comité d’Expansion Économique du Val-d’Oise). Encuentro e intercambio con Annie Geoffroy, CEO de RIBER. Presentación de la empresa y de sus principales líneas de actividad, con atención a la innovación y las tecnologías de alto valor añadido.",
 "who": "Medeya Spasova, CEEVO; Annie Geoffroy, CEO de RIBER",
 "venue": "31 Rue Casimir Perier, 95870 Bezons"
 },
@@ -456,7 +459,8 @@ const E = [
 "e": "16:00",
 "st": "confirmado",
 "ti": "Visita a Mistral AI",
-"desc": "Conferencia y sesión plenaria con el equipo de Mistral. Es necesario facilitar nombre y apellidos de los participantes y llevar el pasaporte.",
+"desc": "Conferencia y sesión plenaria con el equipo de Mistral. Encuentro con la persona responsable del área industrial. Es necesario facilitar nombre y apellidos de los participantes y llevar el pasaporte.",
+"who": "Romain Sinthe, responsable de desarrollo de negocio para el sur de Europa (South Europe GTM Lead), Mistral AI",
 "rem": [
 "Pasaporte en mano: acceso con lista nominal"
 ],
@@ -520,7 +524,7 @@ const E = [
 "st": "confirmado",
 "ti": "Presentación del ecosistema Paris-Saclay",
 "desc": "Presentación del ecosistema de innovación, investigación y emprendimiento de Paris-Saclay, con intervención de diferentes representantes del ecosistema e intercambio sobre el modelo de colaboración entre empresas, centros de investigación, universidades, startups e inversores.",
-"who": "Jérémy Hervé, Head of Innovation and Economic Development de la autoridad de desarrollo de Paris-Saclay"
+"who": "Jérémy Hervé, director de Innovación y Desarrollo Económico de EPA Paris-Saclay"
 },
 {
 "d": "d4",
@@ -529,7 +533,8 @@ const E = [
 "e": "12:00",
 "st": "confirmado",
 "ti": "Visita a Danone Research & Innovation",
-"desc": "Visita a las instalaciones de investigación e innovación y presentación de las principales líneas de innovación."
+"desc": "Visita a las instalaciones de investigación e innovación y presentación de las principales líneas de innovación. Anfitrión: Eric Dugré, director del centro.",
+"who": "Eric Dugré, director del centro de I+D de Danone (anfitrión)"
 },
 {
 "d": "d4",
@@ -547,7 +552,8 @@ const E = [
 "e": "15:00",
 "st": "confirmado",
 "ti": "Visita a EDF",
-"desc": "Visita al centro de I+D de EDF.",
+"desc": "Visita al centro de I+D de EDF. Anfitriones: François Molho y Thierry Lucidarme.",
+"who": "François Molho, director de Acción Regional de EDF I+D (anfitrión); Thierry Lucidarme, delegado de Innovación de EDF I+D (anfitrión)",
 "rem": [
 "Ten a mano el QR de acceso"
 ]
@@ -569,6 +575,7 @@ const E = [
 "st": "confirmado",
 "ti": "Visita a Pasqal",
 "desc": "Presentación de Pasqal y de su actividad en computación cuántica. Visita a las instalaciones. Intercambio sobre deep tech, computación cuántica y aplicaciones industriales. Inicio a las 15:30 o a las 16:00.",
+"who": "Antoine Bourbon, Senior Business Developer, Pasqal",
 "venue": "7 rue Léonard de Vinci, Immeuble Pascal, 91300 Massy"
 },
 {
