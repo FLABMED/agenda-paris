@@ -210,6 +210,7 @@ footer a{color:var(--lane-flab)}
 .rem-box{margin:0 0 14px;padding:10px 12px;border-radius:8px;background:var(--rem-bg);border-left:4px solid var(--rem)}
 .rem-box b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--rem);margin-bottom:4px}
 .rem-box ul{margin:0;padding-left:18px}
+.guests{margin:0;padding-left:18px}.guests li{margin:2px 0}.guests a{font-weight:600}.g-org{color:var(--muted,#666)}.g-q{font-size:12px;color:var(--muted,#666);font-style:italic}
 .rem-day{margin:0 0 16px;padding:12px 14px;border-radius:10px;background:var(--rem-bg);border:1px solid color-mix(in srgb,var(--rem) 35%,transparent)}
 .rem-day h3{margin:0 0 6px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--rem)}
 .rem-day ul{margin:0;padding-left:0;list-style:none;display:grid;gap:4px}
@@ -405,7 +406,21 @@ const E = [
 "st": "propuesto",
 "ti": "Cena en la residencia de la embajada del representante de la OCDE en España",
 "who": "Ximo Puig, embajador y representante permanente de España ante la OCDE",
-"venue": "Residencia del embajador representante permanente de España ante la OCDE, 41 avenue Foch, 75116 París"
+"venue": "Residencia del embajador representante permanente de España ante la OCDE, 41 avenue Foch, 75116 París",
+"guests": [
+[
+"Ximo Puig",
+"Delegación Permanente de España ante la OCDE",
+"https://www.linkedin.com/search/results/people/?keywords=Ximo%20Puig%20Delegaci%C3%B3n%20Permanente%20de%20Espa%C3%B1a%20ante%20la%20OCDE",
+false
+],
+[
+"Belén Marcos",
+"VINCI Highways",
+"https://www.linkedin.com/search/results/people/?keywords=Bel%C3%A9n%20Marcos%20VINCI%20Highways",
+false
+]
+]
 },
 {
 "d": "d3",
@@ -509,7 +524,87 @@ const E = [
 "st": "confirmado",
 "ti": "Cena con altos ejecutivos invitados",
 "desc": "Encuentro informal de networking con directivos y CEOs de empresas francesas, orientado al intercambio de experiencias y a la generación de oportunidades de colaboración. CEOs confirmados: PAPREC, Total, Valeo, Siemens.",
-"venue": "Restaurante Chez Laurent, 41 avenue Gabriel, 75008 París"
+"venue": "Restaurante Chez Laurent, 41 avenue Gabriel, 75008 París",
+"guests": [
+[
+"Gilles Tauzin",
+"Groupe RATP",
+"https://www.linkedin.com/in/gilles-tauzin-107b6aab/",
+true
+],
+[
+"Pascal Manuelli",
+"TotalEnergies",
+"https://www.linkedin.com/in/pascal-manuelli-a0916011/",
+true
+],
+[
+"Stephane Chambon",
+"TotalEnergies",
+"https://www.linkedin.com/in/stephane-chambon/",
+true
+],
+[
+"Frédéric Dombrowski",
+"Rellumix",
+"https://www.linkedin.com/search/results/people/?keywords=Fr%C3%A9d%C3%A9ric%20Dombrowski%20Rellumix",
+false
+],
+[
+"Fatima Amarir",
+"Rellumix",
+"https://www.linkedin.com/in/fatima-amarir/",
+true
+],
+[
+"Thierry Gruszka",
+"Cisco",
+"https://www.linkedin.com/in/thierry-gruszka-1042111/",
+true
+],
+[
+"Bruno Delaye",
+"Embajada de Francia en España",
+"https://www.linkedin.com/in/brunodelaye/",
+true
+],
+[
+"Loan My Descourvieres",
+"Valeo",
+"https://www.linkedin.com/in/loan-my-descourvieres-277a64b/",
+true
+],
+[
+"Jorge Derveaux",
+"Multiverse Computing",
+"https://www.linkedin.com/in/jorgederveaux/",
+true
+],
+[
+"María Pernas",
+"Capgemini",
+"https://www.linkedin.com/in/mariapernas/",
+true
+],
+[
+"Silvia Arto",
+"Club de Ejecutivas Españolas en el Exterior",
+"https://www.linkedin.com/in/silvia-arto/",
+true
+],
+[
+"Ludovic Reverdy",
+"Bouygues",
+"https://www.linkedin.com/in/ludovic-reverdy-674b0b146/",
+true
+],
+[
+"Siemens",
+"nombre pendiente",
+null,
+false
+]
+]
 },
 {
 "d": "d4",
@@ -571,7 +666,45 @@ const E = [
 "st": "propuesto",
 "ti": "Almuerzo de trabajo con CEOs",
 "desc": "Almuerzo de trabajo e intercambio con representantes del ámbito empresarial, científico y académico sobre innovación, investigación y colaboración público-privada.",
-"venue": "Restaurante Chapeau, 10 Boulevard Gaspard Monge, 91120 Palaiseau"
+"venue": "Restaurante Chapeau, 10 Boulevard Gaspard Monge, 91120 Palaiseau",
+"guests": [
+[
+"Eric Dugré",
+"Danone",
+"https://www.linkedin.com/in/eric-dugre-b26b8442/",
+true
+],
+[
+"François Molho",
+"EDF R&D",
+"https://www.linkedin.com/search/results/people/?keywords=Fran%C3%A7ois%20Molho%20EDF%20R%26D",
+false
+],
+[
+"Xavier Apolinarski",
+"Université Paris-Saclay",
+"https://www.linkedin.com/in/xavier-apolinarski-854b74273/",
+true
+],
+[
+"Roch Drozdowski",
+"IPVF",
+"https://www.linkedin.com/in/rochds/",
+true
+],
+[
+"Jacques Pinget",
+"Institut Polytechnique de Paris",
+"https://www.linkedin.com/in/jacquespinget/",
+true
+],
+[
+"Stéphanie Tea",
+"Paris-Saclay",
+"https://www.linkedin.com/in/st%C3%A9phanie-tea-8aaa0020/",
+true
+]
+]
 },
 {
 "d": "d4",
@@ -811,10 +944,11 @@ function openDetail(id, cl){
     ev.maps && ["Ubicación", ev.maps],
     ev.desc && ["Detalle", ev.desc],
     ev.who && ["Participan", ev.who],
+    ev.guests && ["Invitados confirmados", ev.guests],
     ev.note && ["Notas internas", ev.note]
   ].filter(Boolean);
   let body = ev.rem&&ev.rem.length ? `<div class="rem-box" role="note"><b>Recordatorio</b><ul>${ev.rem.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>` : "";
-  body += `<dl>${rows.map(([k,v])=>k==="Ubicación" ? `<dt>${k}</dt><dd>${v.map(([lab,q])=>`${esc(lab)} · <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}" target="_blank" rel="noopener">Abrir en Google Maps</a>`).join("<br>")}</dd>` : `<dt>${k}</dt><dd>${(k==="Participan"||k==="Detalle")?hl(v):esc(v)}${k==="Lugar"&&/\d/.test(v)?` · <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(v)}" target="_blank" rel="noopener">Abrir en Google Maps</a>`:""}</dd>`).join("")}</dl>`;
+  body += `<dl>${rows.map(([k,v])=>k==="Invitados confirmados" ? `<dt>${k}</dt><dd><ul class="guests">${v.map(([n,o,u,ok])=>`<li>${u?`<a href="${esc(u)}" target="_blank" rel="noopener" title="${ok?"Perfil de LinkedIn":"Búsqueda en LinkedIn (perfil no verificado)"}">${esc(n)}</a>`:esc(n)} <span class="g-org">· ${esc(o)}</span>${u&&!ok?` <span class="g-q">(búsqueda)</span>`:""}</li>`).join("")}</ul></dd>` : k==="Ubicación" ? `<dt>${k}</dt><dd>${v.map(([lab,q])=>`${esc(lab)} · <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}" target="_blank" rel="noopener">Abrir en Google Maps</a>`).join("<br>")}</dd>` : `<dt>${k}</dt><dd>${(k==="Participan"||k==="Detalle")?hl(v):esc(v)}${k==="Lugar"&&/\d/.test(v)?` · <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(v)}" target="_blank" rel="noopener">Abrir en Google Maps</a>`:""}</dd>`).join("")}</dl>`;
   const txt=(ev.who||"")+" "+(ev.desc||"");
   const ppl=PEOPLE.filter(pp=>txt.includes(pp.n));
   if(ppl.length) body += `<div class="people">${ppl.map(pp=>`<div class="person" tabindex="0" role="button" data-n="${esc(pp.n)}" title="Ver ficha"><img src="${pp.img}" alt="${esc(pp.n)}" loading="lazy"><b>${esc(pp.n)}</b><span>${esc(pp.org)}</span>${TEL[pp.n]?`<span class="ph">☎ contacto</span>`:""}</div>`).join("")}</div>`;
