@@ -197,6 +197,13 @@ footer a{color:var(--lane-flab)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rem:#fbbf5a;--rem-bg:#3a2a12}}
 :root[data-theme="dark"]{--rem:#fbbf5a;--rem-bg:#3a2a12}
 .ev .tag.rem{background:var(--rem);color:#fff}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.info-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.info-card h3{margin:0 0 6px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--lane-flab)}
+.info-card p{margin:0;font-size:15px}
+.info-card a{color:var(--lane-flab)}
+.info-card .info-note{margin-top:8px;font-size:13px;color:var(--warn)}
+.info-foot{margin:14px 2px 0;font-size:13px;color:var(--muted)}
 .ev.short{flex-direction:row;align-items:center;gap:8px;padding:2px 9px}
 .ev.short .t{flex:0 0 auto;font-size:11.5px}
 .ev.short .ti{font-size:12.5px;-webkit-line-clamp:1!important;white-space:nowrap;text-overflow:ellipsis;display:block;min-width:0}
@@ -258,7 +265,8 @@ const TEL = {};
 const PEOPLE = [];
 const BOLD_NAMES = ["Céline Dailly", "Thomas Fauvel", "Victorio Redondo", "Ximo Puig", "Medeya Spasova", "Annie Geoffroy", "Alexandra Dublanche", "Jérémy Hervé"];
 const BOLD_LABELS = [];
-const DAYS = [{"id": "d2", "n": "2", "dow": "Lunes", "label": "Innovación en corporaciones", "lanes": ["prog", "log"]}, {"id": "d3", "n": "3", "dow": "Martes", "label": "Industria, innovación y ecosistema emprendedor", "lanes": ["prog", "log"]}, {"id": "d4", "n": "4", "dow": "Miércoles", "label": "Paris-Saclay: investigación y deep tech", "lanes": ["prog", "log"]}];
+const DAYS = [{"id": "d2", "n": "2", "dow": "Lunes", "label": "Innovación en corporaciones", "lanes": ["prog", "log"]}, {"id": "d3", "n": "3", "dow": "Martes", "label": "Industria, innovación y ecosistema emprendedor", "lanes": ["prog", "log"]}, {"id": "d4", "n": "4", "dow": "Miércoles", "label": "Paris-Saclay: investigación y deep tech", "lanes": ["prog", "log"]}, {"id": "info", "n": "i", "dow": "", "label": "Información de interés", "lanes": []}];
+const INFO = [{"t": "Alojamiento", "x": "Hôtel Alfred Sommier, 20 rue de l'Arcade, 75008 París.", "maps": "Hôtel Alfred Sommier, 20 rue de l'Arcade, 75008 Paris"}, {"t": "Vuelos", "x": "Ida, 2 nov.: Valencia 09:10 → París-Orly 11:10. Vuelta, 4 nov.: París-Orly (T1) 21:25."}, {"t": "Documentación", "x": "DNI o pasaporte en vigor. Para acceder a Mistral AI (3 nov.) es obligatorio el pasaporte."}, {"t": "Vestimenta", "x": "Business casual en visitas y encuentros empresariales."}, {"t": "Clima", "x": "En noviembre suele hacer frío en París: abrigo, calzado cómodo y paraguas."}, {"t": "Puntualidad y traslados", "x": "Los traslados están incluidos en la agenda y algunos horarios son ajustados. Llega con antelación a los puntos de encuentro."}];
 const E = [
 {
 "d": "d2",
@@ -336,7 +344,7 @@ const E = [
 "s": "14:30",
 "e": "15:00",
 "st": "propuesto",
-"ti": "Station F: visita a las instalaciones",
+"ti": "Station F: tour por las instalaciones",
 "desc": "Recorrido por el campus de Station F.",
 "venue": "Station F, 5 Parvis Alan Turing, 75013 París"
 },
@@ -408,8 +416,8 @@ const E = [
 "s": "11:30",
 "e": "13:00",
 "st": "propuesto",
-"ti": "Cóctel networking con Alexandra Dublanche",
-"desc": "Almuerzo de trabajo con Alexandra Dublanche, vicepresidenta de la Región Île-de-France. Intercambio con directivos y responsables de innovación; debate sobre oportunidades de colaboración empresarial y desarrollo del ecosistema de innovación de Île-de-France.",
+"ti": "Cóctel networking y almuerzo de trabajo",
+"desc": "Cóctel networking y almuerzo de trabajo con Alexandra Dublanche, vicepresidenta de la Región Île-de-France. Intercambio con directivos y responsables de innovación; debate sobre oportunidades de colaboración empresarial y desarrollo del ecosistema de innovación de Île-de-France.",
 "who": "Ximo Puig, embajador y representante permanente de España ante la OCDE (anfitrión); Alexandra Dublanche, vicepresidenta de la Región Île-de-France",
 "venue": "Residencia del embajador de España ante la OCDE (Ximo Puig), 10 Avenue Marceau, 75008 París"
 },
@@ -642,6 +650,13 @@ function renderChips(){
 function render(){
   renderTabs(); renderChips();
   const day = DAYS.find(d=>d.id===current);
+  if(current==="info"){
+    document.getElementById("day-title").textContent = "Información de interés";
+    document.getElementById("chips").innerHTML = "";
+    document.getElementById("alert").innerHTML = "";
+    document.getElementById("view").innerHTML = `<div class="info-grid">${INFO.map(i=>`<section class="info-card"><h3>${esc(i.t)}</h3><p>${esc(i.x)}${i.maps?` · <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(i.maps)}" target="_blank" rel="noopener">Abrir en Google Maps</a>`:""}</p>${i.note?`<p class="info-note">${esc(i.note)}</p>`:""}</section>`).join("")}</div><p class="info-foot">Los horarios están sujetos a cambios.</p>`;
+    return;
+  }
   document.getElementById("day-title").textContent =
     day.id==="tbd" ? "Actividades sin día confirmado" : `${day.dow} ${day.n} de ${MONTH}: ${day.label}`;
   const view = document.getElementById("view");
