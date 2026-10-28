@@ -226,7 +226,7 @@ html.embed dialog{position:absolute;margin:0 auto;left:0;right:0}
     <h1>Misión Empresarial a París 2026</h1>
     <p>Agenda Fundación LAB · París, 2, 3 y 4 de noviembre</p>
     <div class="tagline">Inmersión en innovación, deep tech e industria</div>
-    <span class="draft">Programa del 26/10/2026: horarios sujetos a cambios</span>
+    <span class="draft">Programa actualizado el 28/10/2026: horarios sujetos a cambios</span>
   </div>
   <nav class="days" role="tablist" id="days" aria-label="Días del programa"></nav>
 </header>
@@ -286,41 +286,12 @@ const E = [
 {
 "d": "d2",
 "lane": "prog",
-"s": "12:00",
+"block": 1,
+"s": "12:30",
 "e": "13:00",
 "st": "propuesto",
-"ti": "Visita a Bouygues Construction I+D",
-"desc": "Visita al área de I+D de Bouygues Construction.",
-"venue": "Sede de Bouygues Construction (Challenger), 1 Avenue Eugène Freyssinet, 78280 Guyancourt"
-},
-{
-"d": "d2",
-"lane": "prog",
-"s": "13:00",
-"e": "14:15",
-"st": "propuesto",
-"ti": "Almuerzo en Bouygues",
-"desc": "Almuerzo en las instalaciones de Bouygues Construction.",
-"venue": "Sede de Bouygues Construction (Challenger), 1 Avenue Eugène Freyssinet, 78280 Guyancourt"
-},
-{
-"d": "d2",
-"lane": "log",
-"s": "14:15",
-"e": "15:00",
-"st": "sin",
-"ti": "Trayecto a Station F",
-"desc": "45 minutos de trayecto. Duración del trayecto según el programa; la hora es orientativa."
-},
-{
-"d": "d2",
-"lane": "prog",
-"block": 1,
-"s": "15:00",
-"e": "15:30",
-"st": "propuesto",
 "ti": "Station F: presentación de Choose Paris Region",
-"desc": "¿Por qué París se ha posicionado como uno de los principales hubs de innovación y emprendimiento de Europa? Evolución del ecosistema parisino; factores de atracción de empresas, talento e inversión; posicionamiento internacional de la región.",
+"desc": "¿Por qué París se ha posicionado como uno de los principales hubs de innovación y emprendimiento de Europa? Evolución del ecosistema parisino; factores de atracción de empresas, talento e inversión; posicionamiento internacional de la región. Durante la jornada en Station F se ofrecerá un cóctel.",
 "who": "Céline Dailly, Head of Global Development, Choose Paris Region",
 "venue": "Station F, 5 Parvis Alan Turing, 75013 París"
 },
@@ -328,8 +299,8 @@ const E = [
 "d": "d2",
 "lane": "prog",
 "block": 1,
-"s": "15:30",
-"e": "15:50",
+"s": "13:00",
+"e": "13:20",
 "st": "propuesto",
 "ti": "Station F: inteligencia artificial y nuevas tecnologías",
 "desc": "Tendencias tecnológicas y su impacto en la industria y el tejido empresarial.",
@@ -340,8 +311,8 @@ const E = [
 "d": "d2",
 "lane": "prog",
 "block": 1,
-"s": "16:00",
-"e": "16:30",
+"s": "13:30",
+"e": "14:00",
 "st": "propuesto",
 "ti": "Station F: presentación de Plug and Play",
 "desc": "Visita de Station F con Plug and Play. Ecosistema de startups; modelos de aceleración e innovación abierta; relación entre startups, grandes empresas e inversores.",
@@ -351,8 +322,8 @@ const E = [
 "d": "d2",
 "lane": "prog",
 "block": 1,
-"s": "16:30",
-"e": "17:00",
+"s": "14:00",
+"e": "14:30",
 "st": "propuesto",
 "ti": "Station F: presentación de dos startups",
 "desc": "Presentación de dos startups de Station F.",
@@ -362,8 +333,8 @@ const E = [
 "d": "d2",
 "lane": "prog",
 "block": 1,
-"s": "17:00",
-"e": "17:30",
+"s": "14:30",
+"e": "15:00",
 "st": "propuesto",
 "ti": "Station F: visita a las instalaciones",
 "desc": "Recorrido por el campus de Station F.",
@@ -372,8 +343,8 @@ const E = [
 {
 "d": "d2",
 "lane": "log",
-"s": "17:30",
-"e": "18:20",
+"s": "17:40",
+"e": "18:30",
 "st": "sin",
 "ti": "Trayecto a Renault (Guyancourt)",
 "desc": "50 minutos de trayecto. Duración del trayecto según el programa; la hora es orientativa."
@@ -400,7 +371,7 @@ const E = [
 {
 "d": "d2",
 "lane": "prog",
-"s": "21:30",
+"s": "21:15",
 "e": "23:00",
 "st": "propuesto",
 "ti": "Cena en la Embajada de España en París",
@@ -728,7 +699,7 @@ function render(){
     html += `</div></div>`;
     if(day.band) html += `<p style="font-size:13px;color:var(--muted);margin:10px 2px 0"><span style="display:inline-block;width:6px;height:14px;border-radius:3px;background:var(--lane-block);vertical-align:-2px;margin-right:6px"></span>${esc(day.band.label)} (${day.band.start}–${day.band.end}).</p>`;
   }
-  if(evs.some(e=>e.block)) html += `<p style="font-size:13px;color:var(--muted);margin:10px 2px 0"><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--lane-block);vertical-align:-1px;margin-right:6px"></span>Sesiones en Station F (15:00–17:30).</p>`;
+  if(evs.some(e=>e.block)) html += `<p style="font-size:13px;color:var(--muted);margin:10px 2px 0"><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--lane-block);vertical-align:-1px;margin-right:6px"></span>Sesiones en Station F (12:30–15:00). Durante la jornada se ofrecerá un cóctel.</p>`;
 
   if(pending.length){
     html += `<section class="tray"><h3>Sin hora asignada</h3><p>Eventos de este día que todavía no tienen franja horaria.</p><div class="cards">`;
